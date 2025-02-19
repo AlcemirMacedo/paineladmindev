@@ -1,0 +1,27 @@
+.menu-home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-home a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-home .link_recibo{
+    width: 150px;
+    height: 90px;
+    background-color: var(--laranja2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    transition: all 0.3s;
+    margin: 20px;
+}
+.menu-home .link_recibo:hover{
+    box-shadow: 0 0 10px black;
+}

@@ -1,0 +1,29 @@
+:root{
+    --laranja: #ED2600;
+    --laranja2:#E36600;
+    --fundo: rgb(4, 23, 30);
+    --fundo2: rgb(9, 42, 54);
+    --branco: #fff;
+    --color-blue: #3487f5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+:root{
+    --primary-collor: #;
+}
+
+/* body{
+    display: flex;
+    width: 100wh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+
