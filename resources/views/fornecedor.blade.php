@@ -39,9 +39,9 @@
                         <td>{{ $item->telefone }}</td>
                         <td>{{ $item->email }}</td>
                         <td>
-                            <a title="Editar Fornecedor" href="/editarfornecedor/{{ $item->id_fornecedores }}"><i class="bi bi-pencil"></i></a>
-                             <a title="Emitir Recibo" href="/emitirrecibo/{{ $item->id_fornecedores }}"><i class="bi bi-file-text"></i></a>
-                             <a title="Excluir Fornecedor" href="#" onclick="confirmarAcao({{ $item->id_fornecedores }})"><i class="bi bi-trash3"></i></a>
+                            <a title="Editar Fornecedor" class="btn btn-warning" href="/editarfornecedor/{{ $item->id_fornecedores }}"><i class="bi bi-pencil"></i></a>
+                             <a title="Emitir Recibo" class="btn btn-success" href="/emitirrecibo/{{ $item->id_fornecedores }}"><i class="bi bi-file-text"></i></a>
+                             <a title="Excluir Fornecedor" class="btn btn-danger" href="#" onclick="confirmarAcao({{ $item->id_fornecedores }})"><i class="bi bi-trash3"></i></a>
                         </td>
                     </tr>
                 @endforeach

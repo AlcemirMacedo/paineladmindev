@@ -59,7 +59,10 @@ Route::middleware(['session'])->group(function(){
 
 
     // Rota para gerar o pdf
-    Route::post('/gerarpdf', [rdvController::class, 'gerarPdf']);
+    Route::post('/gerarrdv', [rdvController::class, 'gerarRdv']);
+
+    // Rota para gerar o pdf diretamente
+    Route::get('/gerarrdvdir/{value}', [rdvController::class, 'gerarRdvdir']);
 
     //Rotas de edições
     Route::get('/editarrdv/{value}', [rdvController::class, 'editarRdv']);

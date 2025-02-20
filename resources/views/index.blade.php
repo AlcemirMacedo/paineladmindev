@@ -18,7 +18,12 @@
     <div class="dash-fornecedor ">
         <h1>RDV's</h1>
         <hr>
-        <a href="/novordv" class="btn btn-success novo-rdv">Novo RDV</a>
+        @php
+            if($count_funcionario !== 0 ){
+            echo "<a href='/novordv' class='btn btn-success novo-rdv'>Novo RDV</a>";
+            }
+        @endphp
+
         <table class="table table-dark">
             <tr>
                 <th scope="col">RDV nº</th>
@@ -44,8 +49,11 @@
                     <td>{{ $item->via }}</td>
                     <td>{{ $databr }} às {{ $item->hora}}</td>
                     <td>
-                        <a href="/editarrdv/{{ $item->id }}" class="btn btn-warning text-white" style="color: rgb(22, 141, 225)" title="Editar">
+                        <a href="/editarrdv/{{ $item->id }}" class="btn btn-warning text-white" title="Editar">
                             <i class="bi bi-pencil"></i>
+                        </a>
+                        <a class="btn btn-success text-white" title="Excluir" href="/gerarrdvdir/{{ $item->id }}" onclick="confirmarAcao({{ $item->id }})">
+                            <i class="bi bi-file-text"></i>
                         </a>
                         <a class="btn btn-danger text-white" title="Excluir" href="/excluirrdv/{{ $item->id }}" onclick="confirmarAcao({{ $item->id }})">
                             <i class="bi bi-trash"></i>

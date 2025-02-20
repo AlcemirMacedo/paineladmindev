@@ -109,7 +109,7 @@
     </form>
 
     <hr style="border: rgb(177, 177, 177) 1px solid">
-    <form action="/gerarpdf" method="POST">
+    <form action="/gerarrdv" method="POST">
         @csrf
         @foreach ($selectJoin as $item)
             <input type="hidden" name="numrdv" value="{{ @$item->num_rdv }}">

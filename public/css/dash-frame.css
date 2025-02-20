@@ -37,6 +37,10 @@ body{
     color: #1f75ca;
 }
 
+.btn{
+    color:white;
+}
+
 .pagination li.disabled span {
     color: #6c757d;
     background-color: #e9ecef;

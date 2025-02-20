@@ -65,10 +65,10 @@
                         </td>
                         <td class="name_forn">{{ $item->email }}<input type="hidden" placeholder="{{ $item->email }}" value="{{ $item->email }}" name="nome" readonly></td>
                         <td>
-                            <a href="/formrusuario/{{ $item->id_usuario }}" class="edit-bot" style="color: rgb(22, 141, 225)" title="Editar">
+                            <a href="/formrusuario/{{ $item->id_usuario }}" class="btn btn-warning" title="Editar">
                                 <i class="bi bi-pencil"></i>
-                            </a> |
-                            <a class="excluir-bot" title="Excluir" href="/excluirsuario/{{ $item->id_usuario }}">
+                            </a>
+                            <a class="btn btn-danger" title="Excluir" href="/excluirsuario/{{ $item->id_usuario }}">
                                 <i class="bi bi-trash"></i>
                             </a>
                         </td>

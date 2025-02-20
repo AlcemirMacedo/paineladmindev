@@ -10,7 +10,6 @@
         <hr>
         <div class="pesq-field">
             <form action="/searchrecibo" class="form-inline" method="GET">
-                {{-- <a href="/formReciboAvulso" class="btn btn-success" style="margin-right: 10px" data-toggle="modal" data-target="#modal-select">Recibo Avulso</a> --}}
                 <a href="/formrecibo" class="btn btn-success" style="margin-right: 10px">Recibo Avulso</a>
                 <input type="text" name="search" class="form-control col-md-4" placeholder="Pesquisar por: Nome ou CPF ou CNPJ">
                 <button type="submit" class="btn btn-secondary" style="margin-left: 10px">Pesquisar</button>
@@ -64,12 +63,12 @@
                             <td class="text-center">
                                 @php
                                     if($item->status_recibo == 1 || $item->status_recibo == NULL){
-                                        echo "<button title='Baixar' class='baixar-bot' type='submit' style='color: rgb(22, 186, 85)'>
+                                        echo "<button title='Baixar' class='btn btn-success' type='submit'>
                                             <i class='bi bi-box-arrow-down'></i>
-                                        </button>|
-                                        <a href='/formrecibo/$item->id_recibo'  class='edit-bot' style='color: rgb(22, 141, 225)' title='Editar'>
+                                        </button>
+                                        <a href='/formrecibo/$item->id_recibo'  class='btn btn-warning' title='Editar'>
                                             <i class='bi bi-pencil'></i>
-                                        </a> |";
+                                        </a>";
                                     }
                                 @endphp
                                 {{-- <button title="Baixar" class="baixar-bot" type="submit" style="color: rgb(22, 186, 85)">
@@ -78,7 +77,7 @@
                                    <a href="/formrecibo/{{ $item->id_recibo }}" class="edit-bot" style="color: rgb(22, 141, 225)" title="Editar">
                                     <i class="bi bi-pencil"></i>
                                     </a> | --}}
-                                <a class="excluir-bot" title="Excluir" href="#" onclick="confirmarAcao({{ $item->id_recibo }})">
+                                <a class="btn btn-danger" title="Excluir" href="#" onclick="confirmarAcao({{ $item->id_recibo }})">
                                     <i class="bi bi-trash"></i>
                                 </a>
                             </td>

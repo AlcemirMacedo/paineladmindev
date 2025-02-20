@@ -108,14 +108,14 @@ class crudReciboController extends Controller
     public function searchRecibo(Request $request){
 
         $sql = reciboModel::join('tb_fornecedores', 'tb_fornecedores.cpfcnpj', '=', 'tbrecibo.cpfcnpj_recibo')
-        ->where('nome', 'like', '%'.$request->search.'%')
-        ->orWhere('num_recibo', 'like', '%'.$request->search.'%')
+        ->Where('num_recibo', 'like', '%'.$request->search.'%')
         ->orWhere('cpfcnpj', 'like', '%'.$request->search.'%')->paginate(10);
 
-        // $qnt = count($sql);
+        $total_recibo = count($sql);
         if(count($sql) > 0){
             return view('gridrecibo', [
                 'sql' => $sql,
+                'total_recibo' => $total_recibo
             ]);
         }
         else{

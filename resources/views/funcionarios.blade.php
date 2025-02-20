@@ -59,10 +59,10 @@
                             <td>{{ $item->data_demissao}}<input type="hidden" placeholder="{{ $item->data_demissao}}" value="{{ $item->data_demissao}}" name="data" readonly></td>
                             <td>{{ $item->data_nasc}}<input type="hidden" placeholder="{{ $item->data_nasc}}" value="{{ $item->data_nasc}}" name="data" readonly></td> --}}
                             <td>
-                                <a href="/cadastrofuncionario/{{ $item->id_funcionario }}" class="edit-bot" style="color: rgb(22, 141, 225)" title="Editar">
+                                <a href="/cadastrofuncionario/{{ $item->id_funcionario }}" class="btn btn-warning" title="Editar">
                                     <i class="bi bi-pencil"></i>
-                                </a> |
-                                <a class="excluir-bot" title="Excluir" href="#" onclick="confirmarAcao({{ $item->id_funcionario }})">
+                                </a>
+                                <a class="btn btn-danger" title="Excluir" href="#" onclick="confirmarAcao({{ $item->id_funcionario }})">
                                     <i class="bi bi-trash"></i>
                                 </a>
                             </td>
