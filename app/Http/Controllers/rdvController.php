@@ -66,6 +66,7 @@ class rdvController extends Controller
             $r->equipe,
             $r->ope,
             $r->via,
+            $r->obs_rdv,
             date('Y-m-d H:i:s'),
         ]);
 

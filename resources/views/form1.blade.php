@@ -86,6 +86,12 @@
                 <input name="ope" class="form-control" type="text">
             </div>
         </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label>Observações</label>
+                <input name="obs_rdv" class="form-control" type="text">
+            </div>
+        </div>
 
         <button type="submit" class="btn btn-success">Próximo <i class="bi bi-chevron-double-right"></i></button>
         <button type="button" class="btn" onclick="window.history.back()">Voltar</button>
